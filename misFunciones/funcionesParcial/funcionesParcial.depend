@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1554926568 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcionesGet.h"
+
+1554926591 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\funcionesget.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	"funcionesGet.h"
+
+1554925225 c:\programacionlaboratorio c\misfunciones\funcionesparcial\funcionesget.h
+

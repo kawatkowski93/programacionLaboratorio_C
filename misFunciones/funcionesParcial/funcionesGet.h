@@ -1,0 +1,13 @@
+int getInt(char* mensaje);
+float getFloat(char* mensaje);
+char getChar(char* mensaje);
+void getString(char* mensaje,char* input);
+int validarStringNumerico(char* stringNumerico);
+int validarStringNumericoFlotante(char* stringNumerico);
+int validarStringAlfaNumerico(char* stringNumerico);
+int validarStringLetras(char* stringLetras);
+int validarStringTelefonico(char* stringTelefono);
+int getStringLetras(char* mensaje,char* input);
+int getStringNumeros(char* mensaje,char* input);
+int getStringNumerosFlotantes(char* mensaje, char* input);
+int getValidInt(char* mensaje,char* mensajeError,int lowLimit,int highLimit);
