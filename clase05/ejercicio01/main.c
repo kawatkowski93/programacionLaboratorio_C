@@ -1,25 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define CANTIDAD 7
+#include <string.h>
 
-//REALIZAR UN ARRAY DE ENTEROS, CARGAR(SECUENCIAL) E IMPRIMIR LOS DATOS - REALIZAR UN PROMEDIO
 
+//declarar variable de tipo cadena e imprimir cadena
 int main()
 {
-    int datos[CANTIDAD],i;
-    float acumulador=0;
+    char nombre[20];
 
-    for(i=0; i<CANTIDAD; i++)
-    {
-        printf("Ingrese edad: \n");
-        scanf("%d",&datos[i]);
-        acumulador= acumulador+datos[i];
-    }
-    for(i=0; i<CANTIDAD; i++)
-    {
-        printf("Posicion: %d   Dato: %d\n",i,datos[i]);
-    }
-    printf("\nEl promedio es: %.2f",acumulador/(float)i);
+    printf("Ingrese nombre:");
+    fflush(stdin);
+    scanf("%s",nombre);
+
+    printf("Ha ingresado: %s",nombre);
 
     return 0;
 }

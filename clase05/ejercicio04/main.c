@@ -1,39 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 5
+#include <string.h>
+#include <ctype.h>
+//INGRESAR NOMBRE Y APELLIDO. PASAR TODO A MINUSCULA Y LAS PRIMERAS LETRAS PASARLAS A MAYUSCULA, LUEGO CONTATENAR E IMPRIMIR
 
-//REALIZAR UNA CARGA ALEATORIA E IMPRIMIR POR PANTALLA EL MINIMO Y MAXIMO
 
 int main()
 {
-    int datos[MAX],i,minimo,maximo;
-    char seguir;
+    char nombre[64];
+    char apellido[64];
+    int cantidad;
 
-    for(i=0;i<MAX;i++)
-        datos[i]=0;
 
-    do
-    {
-        printf("Ingrese legajo: \n");
-        scanf("%d",&i);
-        printf("Ingrese dato: \n");
-        scanf("%d",&datos[i]);
-        system("cls");
-        printf("Desea ingresar otro dato?\n   S/N  \n");
-        fflush(stdin);//vaciar el buffer antes de tomar cualquier dato caracter
-        scanf("%c",&seguir);
-    }while(seguir=='s');
+    printf("Ingrese nombre: ");
+    fgets(nombre,sizeof(nombre)-2,stdin);
+    cantidad = strlen(nombre);
 
-    for(i=0;i<MAX;i++)
-    {
-        if(i==0 || datos[i]>maximo)
-            maximo= datos[i];
+    nombre[cantidad-1] = ' ';
 
-        if(i==0 || datos[i]<minimo)
-            minimo= datos[i];
-    }
+    printf("\nIngrese apellido: ");
+    fgets(apellido,sizeof(apellido)-2,stdin);
+    cantidad = strlen(apellido);
 
-    printf("El maximo es: %d\nEl minimo es: %d",maximo,minimo);
+    apellido[cantidad-1] = '\0';
+
+    strlwr(nombre);
+    strlwr(apellido);
+
+    nombre[0]= toupper(nombre[0]);
+    apellido[0]= toupper(apellido[0]);
+
+    strcat(nombre, apellido);
+
+    printf("\n%s \n",nombre);
 
     return 0;
 }
+
+
+//apellidoNombre[0]= "\0";
+//strcpy(apellidoNombre,apellido);
+//strcat(apellidoNombre,apellido);
+//strcat(apellidoNombre, "");
+//strcat(apellidoNombre,nombre);
