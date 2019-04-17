@@ -1,14 +1,22 @@
 # depslib dependency file v1.0
-1554926568 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\main.c
+1555284636 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funcionesGet.h"
+	"abm.h"
 
-1554926591 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\funcionesget.c
+1555263252 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\funcionesget.c
 	<stdio.h>
 	<stdlib.h>
 	<strings.h>
+	<time.h>
 	"funcionesGet.h"
 
-1554925225 c:\programacionlaboratorio c\misfunciones\funcionesparcial\funcionesget.h
+1555263223 c:\programacionlaboratorio c\misfunciones\funcionesparcial\funcionesget.h
+
+1555284476 source:c:\programacionlaboratorio c\misfunciones\funcionesparcial\abm.c
+	<stdio.h>
+	<stdlib.h>
+
+1555284571 c:\programacionlaboratorio c\misfunciones\funcionesparcial\abm.h
 

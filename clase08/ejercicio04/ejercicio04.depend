@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1555375491 source:d:\albornozsantiago\ejercicio04\main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+
+1555375879 d:\albornozsantiago\ejercicio04\persona.h
+
+1555376002 source:d:\albornozsantiago\ejercicio04\persona.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+

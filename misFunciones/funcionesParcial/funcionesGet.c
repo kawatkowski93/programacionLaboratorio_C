@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
+#include <time.h>
 #include "funcionesGet.h"
+
 
 /**
  * \brief Solicita un número al usuario y devuelve un int
@@ -58,7 +60,7 @@ char getChar(char* mensaje)
 void getString(char* mensaje,char* input)
 {
     printf("%s",mensaje);
-    fgets(input,sizeof(input)-2,stdin);
+    gets(input);
 }
 
 /**
@@ -233,25 +235,136 @@ int getStringNumerosFlotantes(char* mensaje, char* input)
  * \brief Solicita un numero entero al usuario y lo valida
  * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
  * \param requestMessage Es el mensaje a ser mostrado en caso de error
+ * \return El número ingresado por el usuario
+ *
+ */
+int getValidInt(char* mensaje,char* mensajeError)
+{
+    char auxStr[256];
+    int auxInt;
+
+        if (!getStringNumeros(mensaje,auxStr))
+        {
+            printf ("%s\n",mensajeError);
+        }
+        auxInt = atoi(auxStr);
+
+        return auxInt;
+}
+
+/**
+ * \brief Solicita una opcion numero entero al usuario y lo valida
+ * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
+ * \param requestMessage Es el mensaje a ser mostrado en caso de error
  * \param lowLimit numero minimo posible
  * \param highLimit numero maximo posible
  * \return El número ingresado por el usuario
  *
  */
-int getValidInt(char* mensaje,char* mensajeError,int lowLimit,int highLimit)
+ int getValidIntOpcion(char* requestMessage,char* errorMessage, int lowLimit, int hiLimit)
 {
-    char auxiliarNumero[50];
-    int auxiliar;
-
-    if(getStringNumeros(mensaje,auxiliarNumero)==0)
+    char auxStr[256];
+    int auxInt;
+    while(1)
     {
-        printf("%s\n",mensajeError);
-    }
-    auxiliar= atoi(auxiliarNumero);
+        if (!getStringNumeros(requestMessage,auxStr))
+        {
+            printf ("%s\n",errorMessage);
+            continue;
 
-    if(auxiliar<lowLimit || auxiliar>highLimit)
-    {
-        printf("El numero debe ser mayor a %d y menor a %d\n",lowLimit,highLimit);
+        }
+        auxInt = atoi(auxStr);
+        if(auxInt < lowLimit || auxInt > hiLimit)
+        {
+            printf ("El numero del debe ser mayor a %d y menor a %d\n",lowLimit,hiLimit);
+            continue;
+
+        }
+        return auxInt;
     }
-    return auxiliar;
 }
+
+/**
+ * \brief Solicita un numero flotante al usuario y lo valida
+ * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
+ * \param requestMessage Es el mensaje a ser mostrado en caso de error
+ * \return El número ingresado por el usuario
+ *
+ */
+float getValidFloat(char* mensaje,char* mensajeError)
+{
+    char auxStr[256];
+    float auxInt;
+
+        if (!getStringNumerosFlotantes(mensaje,auxStr))
+        {
+            printf ("%s\n",mensajeError);
+        }
+        auxInt = atof(auxStr);
+
+        return auxInt;
+}
+
+/**
+ * \brief Solicita un texto solo de letras al usuario y lo valida
+ * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
+ * \param requestMessage Es el mensaje a ser mostrado en caso de error
+ * \param input Array donde se cargara el string
+ * \return Void
+ *
+ */
+void getValidString(char* mensaje,char* mensajeError,char* input)
+{
+    while(1)
+    {
+        if(!getStringLetras(mensaje,input))
+           {
+                printf("%s\n",mensajeError);
+                continue;
+           }
+           fflush(stdin);
+           break;
+    }
+}
+
+/**
+ * \brief Solicita un texto alfanumerico al usuario y lo valida
+ * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
+ * \param requestMessage Es el mensaje a ser mostrado en caso de error
+ * \param input Array donde se cargara el string
+ * \return Void
+ *
+ */
+ void getValidStringAlfaNumerico(char* mensaje,char* mensajeError, char* input)
+ {
+     char auxStr[250];
+
+    if(input!= NULL)
+    {
+        printf("%s",mensaje);
+        gets(auxStr);
+        if(validarStringAlfaNumerico(auxStr)!=0)
+        {
+            strcpy(input,auxStr);
+        }
+        else
+        {
+            printf("%s",mensajeError);
+        }
+    }
+ }
+
+ /**
+ * \brief Genera un número aleatorio
+ * \param desde Número aleatorio mínimo
+ * \param hasta Número aleatorio máximo
+ * \param iniciar Indica si se trata del primer número solicitado 1 indica que si
+ * \return retorna el número aleatorio generado
+ *
+ */
+ char getNumeroAleatorio(int desde, int hasta, int iniciar)
+ {
+     if(iniciar)
+        srand(time(NULL));
+     return desde + (rand()%(hasta + 1 - desde));
+ }

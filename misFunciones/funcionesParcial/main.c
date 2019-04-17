@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funcionesGet.h"
+#include "abm.h"
 
 int main()
 {
-    int numero;
+    int arrayLista[5];
 
-    numero=getValidInt("Ingrese opcion\n","\nerror",1,5);
-    printf("%d",numero);
-
+    if(array_alta(arrayLista,3)==1)
+    {
+        printf(arrayLista);
+    }
 }
+

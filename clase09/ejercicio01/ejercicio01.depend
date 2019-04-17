@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1555458773 source:d:\albornoz santiago\clase09\ejercicio01\main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+
+1555457980 d:\albornoz santiago\clase09\ejercicio01\persona.h
+
+1555461710 source:d:\albornoz santiago\clase09\ejercicio01\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1555458774 source:c:\programacionlaboratorio c\clase09\ejercicio01\main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+
+1555462810 c:\programacionlaboratorio c\clase09\ejercicio01\persona.h
+
+1555517036 source:c:\programacionlaboratorio c\clase09\ejercicio01\persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
