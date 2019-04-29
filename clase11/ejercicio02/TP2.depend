@@ -123,3 +123,52 @@
 	"menues.h"
 	"employee.h"
 
+1556575810 source:c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\almuerzos.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"almuerzos.h"
+	"funcionesGet.h"
+
+1556575810 c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\almuerzos.h
+	"menues.h"
+	"employee.h"
+
+1556575810 c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\menues.h
+
+1556575810 c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\employee.h
+
+1556575810 c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\funcionesget.h
+
+1556575810 source:c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"employee.h"
+	"menues.h"
+	"funcionesGet.h"
+
+1556575810 source:c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\funcionesget.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"funcionesGet.h"
+
+1556575810 source:c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\main.c
+	<stdio.h>
+	<stdlib.h>
+	"employee.h"
+	"menues.h"
+	"funcionesGet.h"
+
+1556575810 source:c:\users\alumno\desktop\santi\programacionlaboratorio_c\clase11\ejercicio02\menues.c
+	<stdio.h>
+	<stdlib.h>
+	<strings.h>
+	<time.h>
+	"menues.h"
+	"funcionesGet.h"
+

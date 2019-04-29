@@ -12,7 +12,7 @@ int main()
     int opcion;
 
     eEmployee arrayEmpleados[CANTIDAD_EMPLEADOS];
-    eSector arraySectores[3]={{1,"COMPRAS"},{2,"VENTAS"},{3,"RRHH"}};
+    eSector arraySectores[]={{1,"COMPRAS"},{2,"VENTAS"},{3,"RRHH"}};
     eMenu arrayMenues[CANTIDAD_MENUES];
 
     initEmployees(arrayEmpleados,CANTIDAD_EMPLEADOS);
